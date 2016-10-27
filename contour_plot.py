@@ -1,4 +1,4 @@
-def conout_plot(x, y, z, nx=100, ny=100, interp='linear'):
+def contour_plot(x, y, z, nx=100, ny=100, interp='linear'):
     """
     Note grid interpolation can take a long time
 
