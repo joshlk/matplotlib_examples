@@ -1,3 +1,7 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.mlab as ml
+
 def contour_plot(x, y, z, nx=100, ny=100, interp='linear'):
     """
     Note grid interpolation can take a long time
@@ -18,9 +22,9 @@ def contour_plot(x, y, z, nx=100, ny=100, interp='linear'):
     yi = np.linspace(y_min, y_max, ny)  # y grid intervals
     zi = ml.griddata(x, y, z, xi, yi, interp=interp)   # z grid
 
-    plt.contour(xi, yi, zi, 15, linewidths=0.5, colors='k')
-    plt.pcolormesh(xi, yi, zi, cmap=plt.get_cmap('rainbow'))
+    plt.contour(xi, yi, zi, linewidths=0.5, colors='k')  # Contour line
+    plt.pcolormesh(xi, yi, zi, cmap=plt.get_cmap('rainbow'))  # Colour map
 
-    plt.colorbar()
+    plt.colorbar() # Put the colour map last so the colorbar is of the color map and not the contour lines
     plt.xlim(x_min, x_max)
     plt.ylim(y_min, y_max)
