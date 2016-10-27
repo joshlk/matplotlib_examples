@@ -1,2 +1,2 @@
 # matplotlib_examples
-Examples for matplotlib
+Becuase the offical examples for matplotlib are just, well, rubbish
